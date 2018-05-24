@@ -1,2 +1,8 @@
 <h1>Cocktail Recipe</h1>
 <h2><%= @cocktail.name %></h2>
+<h3>==recipe==</h3>
+<ol>
+  <% @ingredients.each do |ingredient| %>
+    <li>Add <%= ingredient.doses.first.description %> of <%= ingredient.name %></li>
+  <% end %>
+</ol>
