@@ -1,21 +1,12 @@
-
-
-
-
-
-<%= link_to "create new cocktail", new_cocktail_path %>
-
 <div class="container">
   <div class="row">
-    <div class="card col-xs-6" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-      <% @cocktails.each do |cocktail| %>
+    <% @cocktails.each do |cocktail| %>
+      <div class="card col-xs-6" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1517521303/180131-wondrich-bad-cocktail-tease_wghhv8');">
         <div class="card-category"><%= cocktail.name %></div>
         <div class="card-description">
-          <p><%= link_to "show", cocktail_path(cocktail) %></p>
+          <p><%= link_to "see this cocktail", cocktail_path(cocktail) %></p>
         </div>
-       <!--  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
-            <!-- <a class="card-link" href="#" ></a> -->
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
