@@ -9,7 +9,8 @@
   <% end %>
 </ol>
 
-<h6><%= link_to "add recipe", new_cocktail_dose_path(@cocktail) %></h6>
+<h6><%= link_to "Add recipe", new_cocktail_dose_path(@cocktail) %></h6>
 
 <h3>=============</h3>
-<h4><%= link_to "back to Home", cocktails_path %></h4>
+<h4><%= link_to "Back to Home", cocktails_path %></h4>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
