@@ -2,7 +2,14 @@
 <h2><%= @cocktail.name %></h2>
 <h3>==recipe==</h3>
 <ol>
-  <% @ingredients.each do |ingredient| %>
-    <li>Add <%= ingredient.doses.first.description %> of <%= ingredient.name %></li>
+  <% @doses.each do |dose| %>
+    <li>Add <%= dose.description %> <%= dose.ingredient.name %>
+      <%= link_to "delete", dose_path(dose), method: :delete %><i class="far fa-trash-alt"></i>
+    </li>
   <% end %>
 </ol>
+
+<h6><%= link_to "add recipe", new_cocktail_dose_path(@cocktail) %></h6>
+
+<h3>=============</h3>
+<h4><%= link_to "back to Home", cocktails_path %></h4>
